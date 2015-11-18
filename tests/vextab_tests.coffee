@@ -9,7 +9,7 @@ Vex = vextab.Vex
 VexTab = vextab.VexTab
 Artist = vextab.Artist
 
-$ = require "jquery"
+$j = require "jquery"
 qunit = require "qunitjs"
 
 test = qunit.test
@@ -81,11 +81,11 @@ class VexTabTests
 
   makeParser = -> new VexTab(new Artist(0, 0, 600, {scale: 0.8}))
   makeRenderer = (test_name)->
-    test_div = $('<div></div>').addClass("testcanvas")
-    test_div.append($('<div></div>').addClass("name").text(test_name))
-    canvas = $('<canvas></canvas>').addClass("vex-tabdiv")
+    test_div = $j('<div></div>').addClass("testcanvas")
+    test_div.append($j('<div></div>').addClass("name").text(test_name))
+    canvas = $j('<canvas></canvas>').addClass("vex-tabdiv")
     test_div.append(canvas)
-    $("body").append(test_div)
+    $j("body").append(test_div)
 
     renderer = new Vex.Flow.Renderer(canvas[0], Vex.Flow.Renderer.Backends.CANVAS)
     return renderer
