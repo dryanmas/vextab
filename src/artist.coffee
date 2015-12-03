@@ -252,7 +252,7 @@ class Artist
     @rendered = true
 
     unless Artist.NOLOGO
-      LOGO = "vexflow.com"
+      LOGO = ""
       width = ctx.measureText(LOGO).width
       ctx.save()
       ctx.setFont("Times", 10, "italic")
