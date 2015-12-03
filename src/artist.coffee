@@ -12,7 +12,7 @@ class Artist
   @DEBUG = false
   L = (args...) -> console?.log("(Vex.Flow.Artist)", args...) if Artist.DEBUG
 
-  @NOLOGO = false
+  @NOLOGO = true
 
   constructor: (@x, @y, @width, options) ->
     @options =
